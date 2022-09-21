@@ -4,7 +4,7 @@ import { ThemeContext } from '../context/ThemeContext'
 const Header = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <header role={"menubar"} style={{backgroundColor: theme.bg}}>
+    <header role={"menubar"} style={{backgroundColor: theme.elements}}>
       <h1 style={{color: theme.text}}>Where in the world?</h1>
       <button style={{color: theme.text}} onClick={toggleTheme} type='button'>
         <i className="fas fa-moon"></i>

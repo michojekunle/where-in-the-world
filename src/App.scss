@@ -10,6 +10,11 @@ html {
   font-size: 62.5%;
 }
 
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
 header {
   display: flex;
   align-items: center;
