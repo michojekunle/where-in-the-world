@@ -15,9 +15,10 @@ const Navbar = () => {
     getCountries(`name/${country}`);
   }
 
-  useEffect(() => {
+  const handleRegionChange = (e) => {
+    setRegion(e.target.value);
     getCountries(`region/${region}`);
-  },[region]);
+  }
 
   useEffect(() => {
     getCountries('all');  
@@ -37,7 +38,7 @@ const Navbar = () => {
         />
       </form>
 
-      <select name="region" id="region" placeholder='Filter by Region' onChange={(e) => setRegion(e.target.value)}>
+      <select name="region" id="region" placeholder='Filter by Region' onChange={handleRegionChange}>
         <option value="Africa">Africa</option>
         <option value="America">America</option>
         <option value="Asia">Asia</option>

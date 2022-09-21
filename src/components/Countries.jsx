@@ -3,19 +3,25 @@ import { Link } from 'react-router-dom';
 import { CountriesContext } from '../context/CountriesContext';
 import CountryCard from './CountryCard';
 import { v4 as uuidv4 } from 'uuid';
+import Navbar from './Navbar';
 
 const Countries = () => {
   const { countries } = useContext(CountriesContext);
 
   useEffect(() => {
-  console.log(countries);
+    console.log(countries);
   }, [countries]);
 
   return (
-    <div className="countries">
-      {
-        countries?.map(country => <CountryCard country={country} key={uuidv4()}/>)
-      }
+    <div className="main">
+      <Navbar />
+      <div className="countries">
+        {
+          countries ? (
+            countries?.map(country => <Link to={`/countrydetail/${country.name.common}`}> <CountryCard country={country} key={uuidv4()}/> </Link>)
+          ): <h2>Loading...</h2>
+        }
+      </div>
       
     </div>
   )
