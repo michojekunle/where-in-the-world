@@ -2,7 +2,7 @@ import React from 'react'
 
 const CountryCard = ({country}) => {
   const { flags: { png }, name: { official }, population, region, capital } = country;
-  console.log(capital);
+ 
   return (
     <div className='country-card'>
       <div className="flag"><img src={png} alt={official} /></div>
