@@ -7,12 +7,20 @@ const CountryDetail = () => {
   const{ countries } = useContext(CountriesContext);
   const { commonName } = useParams();
 
-  const { flags: { png }, name: { official }, population, region, capital } = countries.find(country => country.name.common === commonName)
+  const countryDet = countries.find(country => country.name.common === commonName);
+  console.log(countryDet);
+  const { flags: { png }, name: { official }, population, region, capital } = countryDet; 
+  const nativeNames  = Object.keys(countryDet.name.nativeName);
+  const nativeName = countryDet.name.nativeName[nativeNames[nativeNames.length-1]].common;
   return (
     <div className='country-detail'>
       <button><Link to='/'><i className="fas fa-arrow-left"></i>Back</Link></button>
       <div className="flag">
-        <img src={""} alt="" />
+        <img src={png} alt="" />
+      </div>
+      <div className="about-country">
+        <h1>{official}</h1>
+        
       </div>
     </div>
   )
