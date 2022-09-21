@@ -10,7 +10,7 @@ const Navbar = () => {
   const [region, setRegion] = useState('');
   const [country, setCountry] = useState('');
 
-  const BASE_URL = 'https://restcountries.com/v2'
+  const BASE_URL = 'https://restcountries.com/v3.1'
 
   const fetchCountries = (params) => {
     let countriesData;
@@ -28,12 +28,16 @@ const Navbar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setCountries(fetchCountries(`/name/${country}`));
+    setCountries(fetchCountries(`name/${country}`));
   }
 
   useEffect(() => {
-    setCountries(fetchCountries(`/region/${region}`));
-  },[region])
+    setCountries(fetchCountries(`region/${region}`));
+  },[region]);
+
+  window.addEventListener('onload', () => {
+    setCountries(fetchCountries('all'));
+  })
 
 
   
