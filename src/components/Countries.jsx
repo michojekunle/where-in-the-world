@@ -6,11 +6,17 @@ import { v4 as uuidv4 } from 'uuid';
 
 const Countries = () => {
   const { countries } = useContext(CountriesContext);
-  
+
+  useEffect(() => {
+  console.log(countries);
+  }, [countries]);
+
   return (
     <div className="countries">
-      <CountryCard />
-      {/* <CountryCard country={country} key={uuidv4()}/> */}
+      {
+        countries?.map(country => <CountryCard country={country} key={uuidv4()}/>)
+      }
+      
     </div>
   )
 }

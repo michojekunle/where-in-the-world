@@ -5,39 +5,23 @@ import { ThemeContext } from '../context/ThemeContext';
 
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
-  const { setCountries } = useContext(CountriesContext);
+  const { getCountries, countries } = useContext(CountriesContext);
 
   const [region, setRegion] = useState('');
   const [country, setCountry] = useState('');
 
-  const BASE_URL = 'https://restcountries.com/v3.1'
-
-  const fetchCountries = (params) => {
-    let countriesData;
-
-    fetch(`${BASE_URL}/${params}`)
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-
-      countriesData = data;
-    })
-
-    return countriesData;
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    setCountries(fetchCountries(`name/${country}`));
+    getCountries(`name/${country}`);
   }
 
   useEffect(() => {
-    setCountries(fetchCountries(`region/${region}`));
+    getCountries(`region/${region}`);
   },[region]);
 
-  window.addEventListener('onload', () => {
-    setCountries(fetchCountries('all'));
-  })
+  useEffect(() => {
+    getCountries('all');  
+  }, [])
 
 
   
