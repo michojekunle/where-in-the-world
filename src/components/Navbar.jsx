@@ -10,13 +10,12 @@ const Navbar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    getCountries(`name/${country}`);
+    if(country !== '') {
+      getCountries(`name/${country.toLowerCase()}`);
+    }
   }
 
   const handleRegionChange = (e) => {
-    alert(e.target.value);
-    alert(e.target.options[e.target.selectedIndex].value);
-    
     if (e.target.options[e.target.selectedIndex].value !== '') {
       getCountries(`region/${e.target.options[e.target.selectedIndex].value}`);
     }

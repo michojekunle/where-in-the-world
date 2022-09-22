@@ -119,6 +119,13 @@ header {
      flex-wrap: wrap;
      width: 100%;
 
+     h1 {
+      text-align: center;
+      @media screen and (max-width: 450px) {
+        font-size: 1.8rem;
+      }
+     }
+
      .country-card {
       height: 26rem;
 

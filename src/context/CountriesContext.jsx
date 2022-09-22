@@ -8,11 +8,15 @@ const CountriesContextProvider = ({children}) => {
     const BASE_URL = 'https://restcountries.com/v3.1'
 
   const getCountries = (params) => {
+    setCountries([]);
     fetch(`${BASE_URL}/${params}`)
     .then(res => res.json())
     .then(data => {
-      console.log(data);
-      setCountries(data);
+      if (data.status !== 404) {
+        setCountries(data);
+        console.log(data);
+        console.log(countries);
+      }
     })
   }
     
