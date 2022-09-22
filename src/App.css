@@ -64,17 +64,17 @@ header button i {
 }
 .main .countries {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10rem;
+  gap: 3rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 .main .countries .country-card {
-  flex-basis: 25rem;
+  height: 26rem;
 }
 .main .countries .country-card .flag {
   width: 100%;
-  height: 60%;
+  height: 50%;
 }
 .main .countries .country-card .flag img {
   width: 100%;
@@ -86,16 +86,15 @@ header button i {
 }
 .main .countries .country-card .about-country h3 {
   font-weight: 800;
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
 }
 .main .countries .country-card .about-country p {
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 .main .countries .country-card .about-country p span {
   font-weight: 400;
-  font-size: 1.4rem;
   margin-left: 0.8rem;
 }
 @media screen and (max-width: 768px) {
