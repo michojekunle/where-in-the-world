@@ -6,8 +6,6 @@ import { ThemeContext } from '../context/ThemeContext';
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
   const { getCountries } = useContext(CountriesContext);
-
-  const [region, setRegion] = useState('');
   const [country, setCountry] = useState('');
 
   const handleSubmit = (e) => {
@@ -16,9 +14,11 @@ const Navbar = () => {
   }
 
   const handleRegionChange = (e) => {
-    setRegion(e.target.value);
-    if (region !== '') {
-      getCountries(`region/${region}`);
+    alert(e.target.value);
+    alert(e.target.options[e.target.selectedIndex].value);
+    
+    if (e.target.options[e.target.selectedIndex].value !== '') {
+      getCountries(`region/${e.target.options[e.target.selectedIndex].value}`);
     }
   }
 

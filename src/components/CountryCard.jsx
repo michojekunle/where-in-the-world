@@ -9,7 +9,7 @@ const CountryCard = ({country}) => {
       <div className="flag"><img src={png} alt={official} /></div>
       <div className="about-country">
         <h3 style={{color: theme.text}}>{official}</h3>
-        <p style={{color: theme.text}}>Population: <span>{population}</span></p>
+        <p style={{color: theme.text}}>Population: <span>{population.toLocaleString()}</span></p>
         <p style={{color: theme.text}}>Region: <span>{region}</span></p>
         <p style={{color: theme.text}}>Capital: <span>{capital?.map(cap => cap)}</span></p>
       
