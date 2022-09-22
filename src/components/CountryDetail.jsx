@@ -16,10 +16,6 @@ const CountryDetail = () => {
   const language = Object.values(languages);
   const currency = Object.values(currencies);
 
-  useEffect(() => { 
-    alert(nativeName);
-  }, [nativeName])
-
   return (
     <div className='country-details'>
       <button style={{background: theme.elements}}><Link to='/' style={{color: theme.text}}><i className="fas fa-arrow-left"></i>Back</Link></button>
