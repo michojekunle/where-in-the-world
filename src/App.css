@@ -61,10 +61,59 @@ header button i {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding-bottom: 3rem;
+}
+.main .navbar form {
+  border: none;
+  padding: 1rem 2.4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 40%;
+  min-width: 18rem;
+  max-width: 38rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.main .navbar form button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.main .navbar form button i {
+  font-size: 1rem;
+  flex: 1;
+}
+.main .navbar form input {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  flex: 9;
+  font-size: 1.2rem;
+}
+.main .navbar select {
+  border: none;
+  padding: 1rem 1.4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: none;
+  outline: none;
+  width: 30%;
+  min-width: 7rem;
+  max-width: 20rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.main .navbar select option {
+  padding: 1rem;
 }
 .main .countries {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 3rem;
   flex-wrap: wrap;
   width: 100%;
@@ -100,5 +149,8 @@ header button i {
 @media screen and (max-width: 768px) {
   .main {
     padding: 2rem;
+  }
+  .main .countries {
+    justify-content: center;
   }
 }/*# sourceMappingURL=App.css.map */

@@ -18,7 +18,7 @@ const Countries = () => {
       <div className="countries">
         {
           countries ? (
-            countries?.map(country => <Link style={{textDecoration: 'none', flexBasis: '24rem'}} to={`/countrydetail/${country.name.common}`}> <CountryCard country={country} key={uuidv4()}/> </Link>)
+            countries?.map(country => <Link style={{textDecoration: 'none', flexBasis: '24rem', flexGrow: '1'}} to={`/countrydetail/${country.name.common}`}> <CountryCard country={country} key={uuidv4()}/> </Link>)
           ): <h2>Loading...</h2>
         }
       </div>

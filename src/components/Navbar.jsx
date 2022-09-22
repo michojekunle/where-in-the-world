@@ -5,7 +5,7 @@ import { ThemeContext } from '../context/ThemeContext';
 
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
-  const { getCountries, countries } = useContext(CountriesContext);
+  const { getCountries } = useContext(CountriesContext);
 
   const [region, setRegion] = useState('');
   const [country, setCountry] = useState('');
@@ -27,18 +27,20 @@ const Navbar = () => {
 
   
   return (
-    <nav role={'navigation'}>
-      <form onSubmit={handleSubmit}>
-        <button type='submit'><i className="fas fa-search"></i></button>
+    <nav role={'navigation'} className='navbar'>
+      <form onSubmit={handleSubmit} style={{background: theme.elements, color: theme.text}}>
+        <button style={{color: theme.text}} type='submit'><i className="fas fa-search"></i></button>
         <input 
           type="text" 
           placeholder="Search for a country..."
           value={country}
+          style={{color: theme.text}}
           onChange={(e) => setCountry(e.target.value)}
         />
       </form>
 
-      <select name="region" id="region" placeholder='Filter by Region' onChange={handleRegionChange}>
+      <select style={{background: theme.elements, color: theme.text}} name="region" id="region" placeholder='Filter by Region' onChange={handleRegionChange}>
+        <option value="" disabled hidden selected>Filter by Region...</option>
         <option value="Africa">Africa</option>
         <option value="America">America</option>
         <option value="Asia">Asia</option>
