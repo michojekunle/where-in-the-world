@@ -108,9 +108,6 @@ header button i {
   max-width: 20rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-.main .navbar select option {
-  padding: 1rem;
-}
 .main .countries {
   display: flex;
   justify-content: flex-start;
