@@ -159,6 +159,86 @@ header {
   }
 }
 
+.country-details {
+  padding: 5rem;
+
+  button {
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    padding: .8rem 2.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      i {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .country {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 5rem;
+    
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .flag {
+      flex: 1;
+      img {
+        width: 100%;
+      }
+    }
+
+    .about-country {
+      text-align: left;
+      flex: 1;
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .main-details {
+        display: flex;
+        justify-content: start;
+        gap: 5.5rem;
+        flex-wrap: wrap;        
+
+        @media screen and (max-width: 680px) {
+          gap: 2rem;          
+        }
+
+        ul {
+          padding: 0;
+          li {
+            list-style:none;
+            p{
+              font-size: 1.1rem;
+              font-weight: 800;
+              line-height: 2rem;
+              span {
+                font-weight: 300;
+                margin-left: .5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 4rem 2rem ;
+  }
+}
+
 
 
 

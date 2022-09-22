@@ -2,8 +2,10 @@ import React from 'react';
 import { useContext, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CountriesContext } from '../context/CountriesContext';
+import { ThemeContext } from '../context/ThemeContext';
 
 const CountryDetail = () => {
+  const { theme } = useContext(ThemeContext);
   const{ countries } = useContext(CountriesContext);
   const { commonName } = useParams();
   
@@ -19,13 +21,13 @@ const CountryDetail = () => {
   }, [nativeName])
 
   return (
-    <div className='country-detail' style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between'}}>
-      <button><Link to='/'><i className="fas fa-arrow-left"></i>Back</Link></button>
-      <div className="" style={{display: 'flex'}}>
+    <div className='country-details'>
+      <button style={{background: theme.elements}}><Link to='/' style={{color: theme.text}}><i className="fas fa-arrow-left"></i>Back</Link></button>
+      <div className="country">
         <div className="flag">
-          <img src={png} alt="" />
+          <img src={png} alt={official} />
         </div>
-        <div className="about-country" style={{display: 'flex'}}>
+        <div className="about-country" style={{color: theme.text}}>
           <h1>{official}</h1>
 
           <div className="main-details">
@@ -42,8 +44,7 @@ const CountryDetail = () => {
               <li><p>Languages: <span>{language?.map((lang, idx) => idx !== language.length - 1 ? `${lang}, ` : `${lang}.`)}</span></p></li>
             </ul>
           </div>
-      </div>
-        
+      </div>  
       </div>
     </div>
   )
