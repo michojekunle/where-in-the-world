@@ -15,8 +15,8 @@ const CountriesContextProvider = ({children}) => {
     .then(res => res.json())
     .then(data => {
       if (data.status !== 404) {
-        setLoading(false);
         setCountries(data);
+        setLoading(false);
         console.log(data);
         console.log(countries);
       }

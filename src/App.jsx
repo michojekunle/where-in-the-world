@@ -1,3 +1,6 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
 import { useContext } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -6,6 +9,8 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import { ThemeContext } from './context/ThemeContext';
 import CountryDetail from './components/CountryDetail';
+
+AOS.init();
 
 
 function App() {

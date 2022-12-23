@@ -12,7 +12,6 @@ const CountryCard = ({country}) => {
         <p style={{color: theme.text}}>Population: <span>{population.toLocaleString()}</span></p>
         <p style={{color: theme.text}}>Region: <span>{region}</span></p>
         <p style={{color: theme.text}}>Capital: <span>{capital?.map(cap => cap)}</span></p>
-      
       </div>
     </div>
   )
