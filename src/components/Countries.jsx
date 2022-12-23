@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 import { ThemeContext } from '../context/ThemeContext';
 
 const Countries = () => {
-  const { countries } = useContext(CountriesContext);
+  const { countries, loading } = useContext(CountriesContext);
   const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
@@ -19,9 +19,11 @@ const Countries = () => {
       <Navbar />
       <div className="countries">
         {
+          loading ? <h1>Loading Please Wait...</h1> : (
           countries?.length > 0 ? (
             countries?.map(country => <Link style={{textDecoration: 'none', flexBasis: '24rem', flexGrow: '1'}} to={`/countrydetail/${country.name.common}`}> <CountryCard country={country} key={uuidv4()}/> </Link>)
           ): (<h1 style={{color: theme.text}}>No countries to Show...</h1>)
+          )
         }
       </div>
       
