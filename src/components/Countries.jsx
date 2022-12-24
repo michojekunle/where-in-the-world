@@ -8,13 +8,14 @@ import { ThemeContext } from '../context/ThemeContext';
 import Loading from './Loading';
 
 const Countries = () => {
-  const { countries, loading, random } = useContext(CountriesContext);
+  const { countries, loading, random, getCountries } = useContext(CountriesContext);
   const { theme } = useContext(ThemeContext);
   const dataAos = [ 'zoom-in-up', 'fade-in-right', 'fade-up', 'zoom-in-right', 'flip-left' ]
 
   useEffect(() => {
+    getCountries ('all');
     console.log(countries);
-  }, [countries]);
+  }, [countries, getCountries]);
 
   return (
     <div className="main">
