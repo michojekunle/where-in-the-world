@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { useEffect } from 'react';
 import { CountriesContext } from '../context/CountriesContext';
 import { ThemeContext } from '../context/ThemeContext';
 
