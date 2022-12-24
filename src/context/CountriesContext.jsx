@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react'
+import React, { createContext, useState } from 'react'
 
 export const CountriesContext = createContext();
 
@@ -25,10 +25,6 @@ const CountriesContextProvider = ({children}) => {
       }
     })
   }
-  
-   useEffect (() => {
-      getCountries('all');
-   }, [getCountries])
   
 
   return (
