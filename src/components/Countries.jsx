@@ -15,7 +15,7 @@ const Countries = () => {
   useEffect(() => {
     getCountries ('all');
     console.log(countries);
-  }, [countries]);
+  }, []);
 
   return (
     <div className="main">
