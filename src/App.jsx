@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Countries from './components/Countries';
 import Header from './components/Header';
-import Navbar from './components/Navbar';
 import { ThemeContext } from './context/ThemeContext';
 import CountryDetail from './components/CountryDetail';
 

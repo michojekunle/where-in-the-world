@@ -5,6 +5,8 @@ export const CountriesContext = createContext();
 const CountriesContextProvider = ({children}) => {
     const [countries, setCountries] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [random, setRandom] = useState(0)
+    const getRandom = () => Math.ceil(Math.random() * 5)
 
     const BASE_URL = 'https://restcountries.com/v3.1'
 
@@ -17,15 +19,16 @@ const CountriesContextProvider = ({children}) => {
       if (data.status !== 404) {
         setCountries(data);
         setLoading(false);
-        console.log(data);
-        console.log(countries);
+        setRandom(getRandom)
+      }else {
+        setLoading(false);
       }
     })
   }
     
   
   return (
-    <CountriesContext.Provider value={{countries, loading, getCountries}}>
+    <CountriesContext.Provider value={{countries, loading, random, getCountries}}>
         {children}
     </CountriesContext.Provider>
   )
