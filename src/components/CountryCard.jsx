@@ -9,13 +9,7 @@ const CountryCard = ({ country, dataAos }) => {
       className='country-card' 
       style={{background: theme.elements}}
       data-aos={dataAos}
-      data-aos-offset="200"
-      data-aos-delay="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-      data-aos-anchor-placement="top-center"
+      data-aos-duration="1200"
     >
       <div className="flag"><img src={png} alt={official} /></div>
       <div className="about-country">

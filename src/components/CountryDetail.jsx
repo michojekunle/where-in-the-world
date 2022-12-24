@@ -20,10 +20,24 @@ const CountryDetail = () => {
     <div className='country-details'>
       <button style={{background: theme.elements}}><Link to='/' style={{color: theme.text}}><i className="fas fa-arrow-left"></i>Back</Link></button>
       <div className="country">
-        <div className="flag">
+        <div className="flag"
+          data-aos="fade-down-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+        >
           <img src={png} alt={official} />
         </div>
-        <div className="about-country" style={{color: theme.text}}>
+        <div className="about-country" style={{color: theme.text}} 
+          data-aos="slide-up"
+          data-aos-offset="200"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
           <h1>{official}</h1>
 
           <div className="main-details">

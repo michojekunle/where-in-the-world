@@ -10,7 +10,7 @@ import Loading from './Loading';
 const Countries = () => {
   const { countries, loading, random } = useContext(CountriesContext);
   const { theme } = useContext(ThemeContext);
-  const dataAos = [ 'slide-up', 'fade', 'fade-up', 'slide-right', 'slide-left' ]
+  const dataAos = [ 'zoom-in-up', 'fade-in-right', 'fade-up', 'zoom-in-right', 'flip-left' ]
 
   useEffect(() => {
     console.log(countries);
