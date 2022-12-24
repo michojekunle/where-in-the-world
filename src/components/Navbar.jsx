@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { CountriesContext } from '../context/CountriesContext';
 import { ThemeContext } from '../context/ThemeContext';
 
@@ -20,7 +20,9 @@ const Navbar = () => {
     }
   }
 
-  getCountries('all');  
+   useEffect(() => {
+       getCountries('all');  
+   }, [getCountries]); 
 
 
   
