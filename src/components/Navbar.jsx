@@ -18,17 +18,8 @@ const Navbar = () => {
     if (e.target.options[e.target.selectedIndex].value !== '') {
       getCountries(`region/${e.target.options[e.target.selectedIndex].value}`);
     }
-  }
+  } 
 
-   
-   
-   useEffect(() => {
-       const fetchAllCountries = () => getCountries('all');
-       fetchAllCountries()  
-   }); 
-
-
-  
   return (
     <nav role={'navigation'} className='navbar'>
       <form onSubmit={handleSubmit} style={{background: theme.elements, color: theme.text}}>
