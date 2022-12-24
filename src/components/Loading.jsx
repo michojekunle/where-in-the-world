@@ -17,7 +17,7 @@ const Loading = () => {
           <div style={{backgroundColor: text}}></div>
           <div style={{backgroundColor: text}}></div>
       </div>
-      <p style={{color: text, fontSize: '1.4rem', marginTop: "1.2rem",}}>Loading Please wait...</p>
+      <p style={{color: text, fontSize: '1.4rem', marginTop: "1.2rem",}}>Loading please wait...</p>
     </>
   )
 }
