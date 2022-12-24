@@ -20,11 +20,12 @@ const Navbar = () => {
     }
   }
 
-   const fetchAllCountries = () => getCountries('all');
+   
    
    useEffect(() => {
+       const fetchAllCountries = () => getCountries('all');
        fetchAllCountries()  
-   }, [fetchAllCountries]); 
+   }, []); 
 
 
   
