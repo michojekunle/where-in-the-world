@@ -24,7 +24,7 @@ const Navbar = () => {
    
    useEffect(() => {
        fetchAllCountries()  
-   }, []); 
+   }, [fetchAllCountries]); 
 
 
   
