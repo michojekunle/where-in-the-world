@@ -21,7 +21,7 @@ const CountryDetail = () => {
       <button style={{background: theme.elements}}><Link to='/' style={{color: theme.text}}><i className="fas fa-arrow-left"></i>Back</Link></button>
       <div className="country">
         <div className="flag"
-          data-aos="slide-right"
+          data-aos="flip-right"
           data-aos-offset="200"
           data-aos-delay="50"
           data-aos-duration="800"
@@ -33,7 +33,7 @@ const CountryDetail = () => {
           <img src={png} alt={official} />
         </div>
         <div className="about-country" style={{color: theme.text}} 
-          data-aos="slide-left"
+          data-aos="flip-left"
           data-aos-offset="200"
           data-aos-delay="50"
           data-aos-duration="800"
