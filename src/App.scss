@@ -55,6 +55,9 @@ header {
 
 .main{
   padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .navbar {
     display: flex;
@@ -128,11 +131,12 @@ header {
 
      .country-card {
       height: 26rem;
+      flex-basis: 30rem;
       border-radius: 1.5rem;
 
       .flag {
         width: 100%;
-        height: 50%;
+        height: 60%;
 
         img {
           width: 100%;

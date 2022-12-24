@@ -55,6 +55,9 @@ header button i {
 
 .main {
   padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .main .navbar {
   display: flex;
@@ -115,12 +118,22 @@ header button i {
   flex-wrap: wrap;
   width: 100%;
 }
+.main .countries h1 {
+  text-align: center;
+}
+@media screen and (max-width: 450px) {
+  .main .countries h1 {
+    font-size: 1.8rem;
+  }
+}
 .main .countries .country-card {
   height: 26rem;
+  flex-basis: 30rem;
+  border-radius: 1.5rem;
 }
 .main .countries .country-card .flag {
   width: 100%;
-  height: 50%;
+  height: 60%;
 }
 .main .countries .country-card .flag img {
   width: 100%;
