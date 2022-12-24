@@ -72,7 +72,7 @@ header button i {
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   width: 40%;
   min-width: 18rem;
   max-width: 38rem;
@@ -103,7 +103,7 @@ header button i {
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   border: none;
   outline: none;
   width: 30%;
@@ -211,7 +211,7 @@ header button i {
 }
 .country-details .country .about-country .main-details {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 5.5rem;
   flex-wrap: wrap;
 }

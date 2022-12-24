@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CountriesContext } from '../context/CountriesContext';
 import CountryCard from './CountryCard';

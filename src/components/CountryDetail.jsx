@@ -1,5 +1,5 @@
 import React from 'react';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CountriesContext } from '../context/CountriesContext';
 import { ThemeContext } from '../context/ThemeContext';
