@@ -19,7 +19,7 @@ const Countries = () => {
 
   return (
     <div className="main">
-      <Navbar /> 
+      <Navbar />
       {
         loading ? (
           <Loading/>
