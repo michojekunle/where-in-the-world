@@ -129,7 +129,8 @@ header button i {
 .main .countries .country-card {
   height: 26rem;
   flex-basis: 30rem;
-  border-radius: 1.5rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
 }
 .main .countries .country-card .flag {
   width: 100%;
