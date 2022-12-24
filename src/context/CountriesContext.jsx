@@ -25,8 +25,12 @@ const CountriesContextProvider = ({children}) => {
       }
     })
   }
-    
   
+   useEffect (() => {
+      getCountries('all');
+   }, [getCountries])
+  
+
   return (
     <CountriesContext.Provider value={{countries, loading, random, getCountries}}>
         {children}
