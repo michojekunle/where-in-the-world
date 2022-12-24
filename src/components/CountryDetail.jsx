@@ -33,7 +33,7 @@ const CountryDetail = () => {
           <img src={png} alt={official} />
         </div>
         <div className="about-country" style={{color: theme.text}} 
-          data-aos="slide-up"
+          data-aos="slide-left"
           data-aos-offset="200"
           data-aos-delay="200"
           data-aos-duration="800"
