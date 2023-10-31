@@ -113,7 +113,8 @@ header button i {
 }
 .main .countries {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 3rem;
   flex-wrap: wrap;
   width: 100%;

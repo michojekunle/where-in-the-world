@@ -27,7 +27,7 @@ const Countries = () => {
           <div className="countries">
             {
               countries?.length > 0 ? (
-                countries?.map(country => <Link style={{textDecoration: 'none', flexBasis: '33rem'}} to={`/countrydetail/${country.name.common}`}> <CountryCard country={country} dataAos={dataAos[random]} key={uuidv4()}/> </Link>)
+                countries?.map(country => <Link style={{textDecoration: 'none', flexBasis: '33rem'}} key={uuidv4()} to={`/countrydetail/${country.name.common}`}> <CountryCard country={country} dataAos={dataAos[random]} /> </Link>)
               ): (<h1 style={{color: theme.text}}>No Countries Found...</h1>)
             }
           </div>

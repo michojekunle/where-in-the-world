@@ -6,7 +6,7 @@ const Loading = () => {
     const { theme: { text } } = useContext(ThemeContext)
   return (
     <>
-      <div class="lds-grid">
+      <div className="lds-grid">
           <div style={{backgroundColor: text}}></div>
           <div style={{backgroundColor: text }}></div>
           <div style={{backgroundColor: text}}></div>
